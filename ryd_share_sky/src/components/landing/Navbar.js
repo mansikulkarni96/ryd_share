@@ -4,7 +4,7 @@ class Navbar extends Component {
 	render() {
 		return (
 			<div>
-				<nav className="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+				<nav className="navbar is-primary is-transparent no-shadow" role="navigation" aria-label="main navigation">
 	                <div className="container">
 	                    <div className="navbar-brand">
 	                        <a className="navbar-item" href="https://cssninja.io">

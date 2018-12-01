@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 class Hero extends Component {
 	render() {
 		return (
-			<section className="hero is-fullheight is-default is-bold">
+			<section className="hero is-fullheight-with-navbar login-path is-bold">
 	            
 	            <div className="hero-body">
 	                <div className="container">
