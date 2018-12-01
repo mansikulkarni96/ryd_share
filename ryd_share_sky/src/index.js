@@ -9,6 +9,7 @@ import SmartcarProvider from './smartcar'
 import smartcarClient from './smartcar/client'
 
 // Styles
+import './styles/bulma-cooked.css';
 // import './styles/css'
 
 render(
