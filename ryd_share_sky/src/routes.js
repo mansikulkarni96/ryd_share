@@ -3,13 +3,14 @@ import { Route, Router, Switch, Redirect } from 'react-router-dom'
 import createHistory from './history'
 
 // Containers
-import Landing from './containers/Landing'
+import LandingPage from './containers/LandingPage'
+import ErrorPage from './containers/ErrorPage'
 
 
 const Routes = () => (
 	<Router history={createHistory}>
 		<Switch>
-			<Route exact path="/" component={Landing} />
+			<Route exact path="/" component={LandingPage} />
 			<Route exact path="/*" render={props => {
 				return <ErrorPage {...props} />
 			}}/>
