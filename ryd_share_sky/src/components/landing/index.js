@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Components
-import Header from './Header'
+import Navbar from './Navbar'
 import Hero from './Hero'
 import ValueProp from './ValueProp'
 import Signup from './Signup'
@@ -11,7 +11,7 @@ class Landing extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
+				<Navbar />
 				<ValueProp />
 				<Signup />
 				<Footer />
