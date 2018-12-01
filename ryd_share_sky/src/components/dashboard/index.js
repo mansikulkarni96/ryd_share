@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Signup extends Component {
+class Dashboard extends Component {
 	render() {
 		return (
-			null
+			<div />
 		)
 	}
 }
 
-export default Signup
+export default Dashboard

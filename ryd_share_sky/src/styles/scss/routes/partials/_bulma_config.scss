@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// // Set your brand colors
+// $light-purple: #463a46;
+// $purple: #231622;
+// $light-gray: #fbf7fd;
+// $gray: #f2e8f8;
+// $brown: #776d5a;
+// $yellow: #f0ff25;
+// $dark-yellow: #faa916;
+// $red: #92140c;
+// $orange: #d97523;
+
+// // Update Colors
+// $primary: $purple;
+// $info: $gray; 
+// $success: $yellow;
+// $warning: $dark-yellow;
+// $danger: $red;
+// $light: $light-purple;
+// $dark: $purple;
+// $link: $purple;
+// $link-hover: $gray;
+// $link-focus: $gray;
+// $text: $gray;
+
+// $background-color: #281e33;
+
+// // Update Bulma's global variables
+// $family-sans-serif: 'Lato', sans-serif;
+// // $widescreen-enabled: false;
+// // $fullhd-enabled: false;
+
+
+// // Update some of Bulma's component variables
+// // $body-background-color: $light-purple;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+
+// Import only what you need from Bulma
+@import 'node_modules/bulma/bulma'; 
+@import 'node_modules/bulma/sass/utilities/functions';
+@import 'node_modules/bulma-extensions/bulma-badge/src/sass/index';
+// @import 'node_modules/bulma-extensions/bulma-tooltip/dist/bulma-tooltip';
+// @import 'node_modules/bulma-extensions/bulma-switch/dist/bulma-switch';
+// @import 'node_modules/bulma-extensions/bulma-pageloader/dist/bulma-pageloader';

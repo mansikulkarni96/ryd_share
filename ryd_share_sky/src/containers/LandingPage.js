@@ -3,6 +3,6 @@ import React from 'react'
 // Components
 import Landing from '../components/landing'
 
-const LandingPage = landingProps => <Landing />
+const LandingPage = () => <Landing />
 
 export default LandingPage

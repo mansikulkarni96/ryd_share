@@ -3,80 +3,160 @@ import React, { Component } from 'react'
 class Navbar extends Component {
 	render() {
 		return (
-			<nav className="navbar is-transparent">
-			  <div className="navbar-brand">
-			    <a className="navbar-item" href="https://bulma.io">
-			      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
-			    </a>
-			    <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-			      <span />
-			      <span />
-			      <span />
-			    </div>
-			  </div>
-
-			  <div id="navbarExampleTransparentExample" className="navbar-menu">
-			    <div className="navbar-start">
-			      <a className="navbar-item" href="https://bulma.io/">
-			        Home
-			      </a>
-			      <div className="navbar-item has-dropdown is-hoverable">
-			        <a className="navbar-link" href="https://bulma.io/documentation/overview/start/">
-			          Docs
-			        </a>
-			        <div className="navbar-dropdown is-boxed">
-			          <a className="navbar-item" href="https://bulma.io/documentation/overview/start/">
-			            Overview
-			          </a>
-			          <a className="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-			            Modifiers
-			          </a>
-			          <a className="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-			            Columns
-			          </a>
-			          <a className="navbar-item" href="https://bulma.io/documentation/layout/container/">
-			            Layout
-			          </a>
-			          <a className="navbar-item" href="https://bulma.io/documentation/form/general/">
-			            Form
-			          </a>
-			          <hr className="navbar-divider" />
-			          <a className="navbar-item" href="https://bulma.io/documentation/elements/box/">
-			            Elements
-			          </a>
-			          <a className="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-			            Components
-			          </a>
-			        </div>
-			      </div>
-			    </div>
-
-			    <div class="navbar-end">
-			      <div class="navbar-item">
-			        <div class="field is-grouped">
-			          <p class="control">
-			            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms">
-			              <span class="icon">
-			                <i class="fab fa-twitter"></i>
-			              </span>
-			              <span>
-			                Tweet
-			              </span>
-			            </a>
-			          </p>
-			          <p class="control">
-			            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.2/bulma-0.7.2.zip">
-			              <span class="icon">
-			                <i class="fas fa-download"></i>
-			              </span>
-			              <span>Download</span>
-			            </a>
-			          </p>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			</nav>
+			<div>
+				<nav className="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+	                <div className="container">
+	                    <div className="navbar-brand">
+	                        <a className="navbar-item" href="https://cssninja.io">
+	                            <img src="assets/images/logos/fresh-alt.svg" alt="" width="112" height="28" />
+	                        </a>
+	            
+	                        <a className="navbar-item is-hidden-desktop is-hidden-tablet" href="avascript:void(0)">
+	                            <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
+	                                <svg width="1000px" height="1000px">
+	                                    <path className="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+	                                    <path className="path2" d="M 300 500 L 700 500"></path>
+	                                    <path className="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+	                                </svg>
+	                                <button id="menu-icon-trigger" className="menu-icon-trigger" />
+	                            </div>
+	                        </a>
+	            
+	                        <a role="button" href="javascript:void(0)" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+	                            <span aria-hidden="true" />
+	                            <span aria-hidden="true" />
+	                            <span aria-hidden="true" />
+	                        </a>
+	                    </div>
+	            
+	                    <div id="navbar-menu" className="navbar-menu is-static">
+	            
+	                        <div className="navbar-start">
+	                            <a className="navbar-item is-hidden-mobile">
+	                                <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
+	                                    <svg width="1000px" height="1000px">
+	                                        <path className="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+	                                        <path className="path2" d="M 300 500 L 700 500"></path>
+	                                        <path className="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+	                                    </svg>
+	                                    <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
+	                                </div>
+	                            </a>
+	                        </div>
+	            
+	                        <div className="navbar-end">
+	                            <a href="#" className="navbar-item is-secondary">
+	                                Features
+	                            </a>
+	                            <a href="#" className="navbar-item is-secondary">
+	                                Pricing
+	                            </a>
+	                            <div className="navbar-item has-dropdown is-hoverable">
+	                                <a className="navbar-link">
+	                                    Dropdown
+	                                </a>
+	            
+	                                <div className="navbar-dropdown">
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                </div>
+	                            </div>
+	                            <a href="#" className="navbar-item is-secondary modal-trigger" data-modal="auth-modal">
+	                                Log in
+	                            </a>
+	                            <a className="navbar-item">
+	                                <span className="button signup-button rounded secondary-btn raised">
+	                                    Sign up
+	                                </span>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </nav>
+	            <nav id="navbar-clone" className="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+	                <div className="container">
+	                    <div className="navbar-brand">
+	                        <a className="navbar-item" href="https://cssninja.io">
+	                            <img src="assets/images/logos/fresh-alt.svg" alt="" width="112" height="28" />
+	                        </a>
+	            
+	                        <a className="navbar-item is-hidden-desktop is-hidden-tablet">
+	                            <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
+	                                <svg width="1000px" height="1000px">
+	                                    <path className="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+	                                    <path className="path2" d="M 300 500 L 700 500"></path>
+	                                    <path className="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+	                                </svg>
+	                                <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
+	                            </div>
+	                        </a>
+	            
+	                        <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+	                            <span aria-hidden="true"></span>
+	                            <span aria-hidden="true"></span>
+	                            <span aria-hidden="true"></span>
+	                        </a>
+	                    </div>
+	            
+	                    <div id="cloned-navbar-menu" className="navbar-menu is-fixed">
+	            
+	                        <div className="navbar-start">
+	                            <a className="navbar-item is-hidden-mobile">
+	                                <div id="cloned-menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
+	                                    <svg width="1000px" height="1000px">
+	                                        <path className="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+	                                        <path className="path2" d="M 300 500 L 700 500"></path>
+	                                        <path className="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+	                                    </svg>
+	                                    <button id="cloned-menu-icon-trigger" className="menu-icon-trigger"></button>
+	                                </div>
+	                            </a>
+	                        </div>
+	            
+	                        <div className="navbar-end">
+	                            <a href="#" className="navbar-item is-secondary">
+	                                Features
+	                            </a>
+	                            <a href="#" className="navbar-item is-secondary">
+	                                Pricing
+	                            </a>
+	                            <div className="navbar-item has-dropdown is-hoverable">
+	                                <a className="navbar-link">
+	                                    Dropdown
+	                                </a>
+	            
+	                                <div className="navbar-dropdown">
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                    <a className="navbar-item">
+	                                        Dropdown item
+	                                    </a>
+	                                </div>
+	                            </div>
+	                            <a href="#" className="navbar-item is-secondary modal-trigger" data-modal="auth-modal">
+	                                Log in
+	                            </a>
+	                            <a className="navbar-item">
+	                                <span className="button signup-button rounded secondary-btn raised">
+	                                    Sign up
+	                                </span>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </nav>
+            </div>
 		)
 	}
 }

@@ -9,14 +9,13 @@ import SmartcarProvider from './smartcar'
 import smartcarClient from './smartcar/client'
 
 // Styles
-import './styles/bulma-cooked.css';
-// import './styles/css'
+import './styles/css/core/core.min.css'
+import './styles/css/routes/bundle_routes.min.css'
+
 
 render(
 	(
-		<SmartcarProvider client={smartcarClient}>
-			<Routes />
-		</SmartcarProvider>
+		<Routes />
 	),
 	document.querySelector('#root')
 )
