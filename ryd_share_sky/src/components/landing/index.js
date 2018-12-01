@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 // Components
-import Navbar from './Navbar'
 import Hero from './Hero'
 import ValueProp from './ValueProp'
 import SocialProof from './SocialProof'
@@ -14,7 +13,6 @@ class Landing extends Component {
 
 		return (
 			<div>    
-		        <Navbar />
 		        <Hero />
 		        <ValueProp />
 		        <SocialProof />
