@@ -4,13 +4,18 @@ import { render } from 'react-dom';
 // Routes
 import Routes from './routes'
 
-// Styles
-import './styles/css'
+// Smartcar
+import SmartcarProvider from './smartcar' 
+import smartcarClient from './smartcar/client'
 
+// Styles
+// import './styles/css'
 
 render(
 	(
-		<Routes />
+		<SmartcarProvider client={smartcarClient}>
+			<Routes />
+		</SmartcarProvider>
 	),
 	document.querySelector('#root')
 )
