@@ -27,7 +27,7 @@ app.get('/', (req, res) =>{
 });
 
 
-app.get('/callback', (req, res, next) =>{
+app.get('/callback', (req, res, next) => {
 
     let access;
     if(req.query.error){
