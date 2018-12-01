@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const   smartcar        = require('smartcar'),
         express         = require('express'),
+        bodyParser      = require('body-parser'),
         clientId        = process.env.CLIENTID,
         clientSecret    = process.env.CLIENTSECRET,
         redirectUri     = process.env.REDIRECTURI,
@@ -63,6 +64,17 @@ app.get('/callback', (req, res, next) =>{
             res.json(data);
         });
 
+
+});
+
+
+app.get('/vehicles/:token', (req, res) => {
+
+    let accessToken  = req.params.token;
+    smartcar.getVehicleIds(accessToken)
+        .then(function(response) {
+            res.json(response);
+        });
 
 });
 
