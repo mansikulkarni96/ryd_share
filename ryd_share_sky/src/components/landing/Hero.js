@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
+import HeroImage from '../../assets/img/hero_image.svg'
 
 class Hero extends Component {
 	render() {
 		return (
-			<section className="hero is-fullheight-with-navbar login-path is-bold">
+			<section className="hero is-fullheight-with-navbar is-bold is-primary">
 	            <nav className="navbar is-primary is-transparent no-shadow" role="navigation" aria-label="main navigation">
 	                <div className="container">
 	                    <div className="navbar-brand">
 	                        <a className="navbar-item" href="https://cssninja.io">
-	                            <img src="assets/images/logos/fresh-alt.svg" alt="" width="112" height="28" />
+	                            {/*<img src={HeroImage} alt="" width="112" height="28" />*/}
 	                        </a>
-	            
 	                        <a className="navbar-item is-hidden-desktop is-hidden-tablet" href="avascript:void(0)">
 	                            <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
 	                                <svg width="1000px" height="1000px">
@@ -52,23 +52,6 @@ class Hero extends Component {
 	                            <a href="#" className="navbar-item is-secondary">
 	                                Pricing
 	                            </a>
-	                            <div className="navbar-item has-dropdown is-hoverable">
-	                                <a className="navbar-link">
-	                                    Dropdown
-	                                </a>
-	            
-	                                <div className="navbar-dropdown">
-	                                    <a className="navbar-item">
-	                                        Dropdown item
-	                                    </a>
-	                                    <a className="navbar-item">
-	                                        Dropdown item
-	                                    </a>
-	                                    <a className="navbar-item">
-	                                        Dropdown item
-	                                    </a>
-	                                </div>
-	                            </div>
 	                            <a href="#" className="navbar-item is-secondary modal-trigger" data-modal="auth-modal">
 	                                Log in
 	                            </a>
@@ -98,14 +81,14 @@ class Hero extends Component {
 	                        </div>
 	                        <div className="column is-5 is-offset-1">
 	                            <figure className="image is-4by3">
-	                                <img src="assets/images/illustrations/worker.svg" alt="Description" />
+	                                <img src={HeroImage} alt="Description" />
 	                            </figure>
 	                        </div>
 	        
 	                    </div>
 	                </div>
 	            </div>
-	            
+
 	            <div className="hero-foot mb-20">
 	                <div className="container">
 	                    <div className="tabs is-centered">
