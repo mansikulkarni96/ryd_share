@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 
+
+
 class CarList extends Component {
 	render() {
 		return (
-			null
+			<div>
+				<button className="button">
+					Open car
+				</button>
+				<button className="button">
+					Close car
+				</button>
+			</div>
 		)
 	}
 }

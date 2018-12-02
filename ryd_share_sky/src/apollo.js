@@ -11,17 +11,23 @@ const typeDefs = `
 		showRegistration: Boolean!
 	}
 
+	type Item {
+		showItem: String!
+	}
+
 	type Mutation {
 		toggleRegistration(showRegistration: Boolean!): Registration
+		toggleItem(showItem: String!): Item
 	}
 
 	type Query {
 		showRegistration: Registration
+		showItem: Item
 	}
 `
 
 const httpLink = new HttpLink({
-	uri: 'http://localhost:4000'
+	uri: 'https://iterport-ground-prod.herokuapp.com/'
 })
 
 const cache = new InMemoryCache()

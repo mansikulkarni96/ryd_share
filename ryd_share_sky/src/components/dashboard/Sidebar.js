@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
 import Logo from '../../assets/img/logo.svg'
 
+// Apollo
+import { compose, graphql } from 'react-apollo'
+import { SHOW_ITEM, GET_ITEM } from '../../graphql/landing'
+
 class Sidebar extends Component {
 	constructor() {
 		super()
@@ -13,6 +17,7 @@ class Sidebar extends Component {
 	render() {
 
 		const { tab } = this.state
+		const { getItem, showItem } = this.props
 
 		return (
 			<div className="sidebar is-active">
@@ -31,7 +36,7 @@ class Sidebar extends Component {
 	                    	onClick={e => {
 	                    		e.preventDefault()
 	                    		this.setState({ tab: 'history' })
-	                    		localStorage.setItem('item', 'history')
+	                    		showItem({ variables: { showItem: 'history' } })
 	                    	}}
 	                    >
 	                    	<a href="#">
@@ -44,7 +49,7 @@ class Sidebar extends Component {
 	                    	onClick={e => {
 	                    		e.preventDefault()
 	                    		this.setState({ tab: 'carList' })
-	                    		localStorage.setItem('item', 'carList')
+	                    		showItem({ variables: { showItem: 'carList' } })
 	                    	}}
 	                    >
 	                    	<a href="#">
@@ -57,7 +62,7 @@ class Sidebar extends Component {
 	                    	onClick={e => {
 	                    		e.preventDefault()
 	                    		this.setState({ tab: 'bank' })
-	                    		localStorage.setItem('item', 'bank')
+	                    		showItem({ variables: { showItem: 'bank' } })
 	                    	}}
 	                    >
 	                    	<a href="#">
@@ -72,4 +77,7 @@ class Sidebar extends Component {
 	}
 }
 
-export default Sidebar
+export default compose(
+	graphql(SHOW_ITEM, { name: 'showItem' }),
+	graphql(GET_ITEM, { name: 'getItem' })
+)(Sidebar)

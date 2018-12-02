@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 
 import ProfilePic from "../../assets/img/profile.png";
 
+// Apollo
+import { compose, graphql } from 'react-apollo'
+import { SHOW_ITEM, GET_ITEM } from '../../graphql/landing'
+
 import Sidebar from './Sidebar'
 import History from './History'
 import CarList from './CarList'
@@ -9,8 +13,12 @@ import Bank from './Bank'
 
 class Dashboard extends Component {
 
+
 	render() {
+		
 		const name = "Sidnee Gye";
+		const { getItem, showItem } = this.props
+
 		return (
 			<div>
 				<section className="hero is-small">
@@ -38,16 +46,17 @@ class Dashboard extends Component {
 						</div>
 					</div>
 				</section>
+
 				{
-					localStorage.getItem('item') === 'history' ?
+					getItem.showItem === 'history' ?
 					<History />
 					:
 					(
-						localStorage.getItem('item') === 'carList' ?
+						getItem.showItem === 'carList' ?
 						<CarList />
 						:
 						(
-							localStorage.getItem('item') === 'bank' ?
+							getItem.showItem === 'bank' ?
 							<Bank />
 							:
 							<History />
@@ -59,4 +68,7 @@ class Dashboard extends Component {
 	}
 }
 
-export default Dashboard
+export default compose(
+	graphql(SHOW_ITEM, { name: 'showItem' }),
+	graphql(GET_ITEM, { name: 'getItem' })
+)(Dashboard)
