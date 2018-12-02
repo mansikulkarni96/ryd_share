@@ -6,11 +6,14 @@ import createHistory from './history'
 import LandingPage from './containers/LandingPage'
 import ErrorPage from './containers/ErrorPage'
 
+import Dashboard from './containers/Dashboard'
+
 
 const Routes = () => (
 	<Router history={createHistory}>
 		<Switch>
 			<Route exact path="/" component={LandingPage} />
+			{/*<AuthRoute exact path="/dashboard" component={Dashboard} />*/}
 			<Route exact path="/*" render={props => {
 				return <ErrorPage {...props} />
 			}}/>

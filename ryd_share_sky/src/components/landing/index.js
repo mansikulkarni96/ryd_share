@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import Hero from './Hero'
 import ValueProp from './ValueProp'
 import SocialProof from './SocialProof'
-import Contact from './Contact'
 import Login from './Login'
+import Pricing from './Pricing'
 import Footer from './Footer'
 
 class Landing extends Component {
@@ -14,10 +14,10 @@ class Landing extends Component {
 		return (
 			<div>    
 		        <Hero />
+		        <Login />
 		        <ValueProp />
 		        <SocialProof />
-		        <Contact />
-		        <Login />
+		        <Pricing />
 		        <Footer />
 
 		        <div id="backtotop">

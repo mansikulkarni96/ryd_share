@@ -19,20 +19,10 @@
 .button.is-success.glow:hover{
   color: black;
 }
-a{
-  color: #3273dc !important;
 
+
+a {
+	&:hover {
+		color: red;
+	}
 }
-
-//::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-//  color: $primary;
-//}
-//::-moz-placeholder { /* Firefox 19+ */
-//  color: $primary;
-//}
-//:-ms-input-placeholder { /* IE 10+ */
-//  color: $primary;
-//}
-//:-moz-placeholder { /* Firefox 18- */
-//  color: $primary;
-//}

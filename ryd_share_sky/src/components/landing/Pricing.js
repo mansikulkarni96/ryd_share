@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Contact extends Component {
+class Pricing extends Component {
 	render() {
 		return (
 			<section className="section section-light-grey is-medium">
@@ -39,4 +39,4 @@ class Contact extends Component {
 	}
 }
 
-export default Contact
+export default Pricing

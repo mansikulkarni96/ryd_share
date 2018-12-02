@@ -4,6 +4,10 @@ import { render } from 'react-dom';
 // Routes
 import Routes from './routes'
 
+// Apollo
+import { ApolloProvider } from 'react-apollo'
+import client from './apollo'
+
 // Smartcar
 import SmartcarProvider from './smartcar' 
 import smartcarClient from './smartcar/client'
@@ -15,7 +19,9 @@ import './styles/css/routes/bundle_routes.min.css'
 
 render(
 	(
-		<Routes />
+		<ApolloProvider client={client}>
+			<Routes />
+		</ApolloProvider>
 	),
 	document.querySelector('#root')
 )

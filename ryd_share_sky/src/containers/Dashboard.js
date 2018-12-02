@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Pricing extends Component {
+class Dashboard extends Component {
 	render() {
 		return (
-			<div />
+			null
 		)
 	}
 }
 
-export default Pricing
+export default Dashboard
