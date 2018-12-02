@@ -68,20 +68,27 @@ class Hero extends Component {
 	            <div className="hero-body">
 	                <div className="container">
 	                    <div className="columns is-vcentered">
-	                        <div className="column is-5 is-offset-1 landing-caption">
-	                            <h1 className="title is-1 is-bold is-spaced">
-	                                Manage, Deploy.
-	                            </h1>
-	                            <h2 className="subtitle is-5 is-muted">Lorem ipsum sit dolor amet is a dummy text used by typography industry </h2>
-	                            <p>
-	                                <button className="button is-success is-outlined glow is-rounded">Sign In</button>
-	                            </p>
+                            <div className="column is-5 is-offset-1">
+                                <figure className="image is-4by3">
+                                    <img src={HeroImage} alt="Description" style={{transform: "scale(2.4)"}} />
+                                </figure>
+                            </div>
+	                        <div className="column is-3 is-offset-1 landing-caption">
+								<div className="field">
+                                    <div className="control">
+                                        <input type="text" className="input is-rounded" placeholder="Username"/>
+                                    </div>
+								</div>
+                                <div className="field">
+                                    <div className="control"><input type="password" className="input is-rounded" placeholder="Password"/></div>
+                                </div>
+	                            <div className="field">
+                                    <div className="control">
+                                        <button className="button is-success is-outlined glow is-rounded is-medium">Log In</button>
+                                    </div>
+								</div>
 	                        </div>
-	                        <div className="column is-5 is-offset-1">
-	                            <figure className="image is-4by3">
-	                                <img src={HeroImage} alt="Description" />
-	                            </figure>
-	                        </div>
+
 	                    </div>
 	                </div>
 	            </div>
