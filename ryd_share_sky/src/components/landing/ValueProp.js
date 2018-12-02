@@ -74,6 +74,7 @@ class ValueProp extends Component {
 		                        <h1 className="title section-title">You're here because you want the best</h1>
 		                        <h3 className="subtitle is-4 is-muted">And we Know it</h3>
 		                        <div className="divider"></div>
+                                <h3 className="subtitle is-4 is-muted">Here's how it works</h3>
 		                    </div>
 		                    <div className="column is-8 mt-60">
 		        
