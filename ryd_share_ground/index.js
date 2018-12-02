@@ -31,11 +31,20 @@ const UserSchema = new mongoose.Schema({
     accessToken: String,
 });
 
+/**
+ * Token Schema
+ */
+
+const TokenSchema = new mongoose.Schema({
+    access: String,
+    refresh: String
+});
+
+
 UserSchema.plugin(passportMon);
-// Schema Model
+// Models
 const User = mongoose.model("User", UserSchema);
-
-
+const Token = mongoose.model("Token", TokenSchema);
 
 /**
  * Middleware
@@ -62,8 +71,8 @@ const Client = new smartcar.AuthClient({
     clientId,
     clientSecret,
     redirectUri,
-    scope: ['read_vehicle_info'],
-    testMode: true,
+    scope: ['read_vehicle_info', 'read_location', 'read_odometer', 'control_security'],
+    testMode: false,
 });
 
 app.get('/', (req, res) =>{
@@ -72,7 +81,6 @@ app.get('/', (req, res) =>{
     res.redirect(link);
 
 });
-
 
 app.get('/callback', (req, res, next) => {
 
@@ -86,6 +94,12 @@ app.get('/callback', (req, res, next) => {
         .then(_access => {
             // in a production app you'll want to store this in some kind of persistent storage
             access = _access;
+            Token.create({ access: _access.accessToken, refresh: _access.refreshToken}, (err, token) =>{
+                if(err){
+                    throw err;
+                }
+            });
+
 
             //todo: remove this, testing purposes only
             console.log(_access);
@@ -115,25 +129,94 @@ app.get('/callback', (req, res, next) => {
 });
 
 
-app.get('/vehicles/:token', (req, res) => {
+/**
+ * Gets all the vehicles' info for a certain access token
+ */
+app.get('/vehicles/info/:token', (req, res) => {
 
     let accessToken  = req.params.token;
     smartcar.getVehicleIds(accessToken)
-        .then(function(response) {
-            res.json(response);
+        .then(response => {
+            return response.vehicles;
+
+        })
+        .map(vid =>  new smartcar.Vehicle(vid, accessToken).info())
+        .then( vehicle => {
+            res.json(vehicle);
+            console.log(vehicle);
         });
 
 });
 
 
+/**
+ * Get odometer readings of vehicles by id
+ */
+app.get('/vehicle/odometer/:vid/:token', (req, res) => {
+
+    let accessToken = req.params.token;
+    smartcar.getVehicleIds(accessToken)
+        .then(response => {
+            return response.vehicles;
+        })
+        .then(vid => new smartcar.Vehicle(req.params.vid, accessToken).odometer())
+        .then(vehicle => {
+            res.json(vehicle);
+            console.log(vehicle);
+        })
+
+});
+
+/**
+ * Get location of vehicle by id
+ */
+app.get('/vehicle/location/:vid/:token', (req, res) => {
+
+    let accessToken = req.params.token;
+    smartcar.getVehicleIds(accessToken)
+        .then(response => {
+            return response.vehicles;
+        })
+        .then(vid => new smartcar.Vehicle(req.params.vid, accessToken).location())
+        .then(vehicle => {
+            res.json(vehicle);
+            console.log(vehicle);
+        })
+
+});
+
+
+
+app.post('/vehicle/lock/:vid/:token', (req, res) => {
+
+    let accessToken = req.params.token;
+    smartcar.getVehicleIds(accessToken)
+        .then(response => {
+            return response.vehicles;
+        })
+        .then(vid => {
+            const vehicle = new smartcar.Vehicle(req.params.vid, accessToken).vin();
+            return vehicle.lock();
+        })
+        .then(vehicle => {
+            res.json(vehicle);
+            console.log(vehicle);
+        })
+
+});
+
+/**
+ * Register a user
+ */
 app.post('/register', (req, res) =>{
 
     let username = req.body.username;
     let fullName = req.body.fullName;
     let password = req.body.password;
+    // let accessToken = req.body.accessToken;
     console.log(req.body);
 
-    User.register(new User({username, fullName}), password, (err, response) => {
+    User.register(new User({username, fullName, accessToken: ""}), password, (err, response) => {
         if(err){
             res.json({register: "failed"});
         }
@@ -146,13 +229,31 @@ app.post('/register', (req, res) =>{
 
 
 /**
- * Authenticate Here
+ * Authenticate a user
  */
 app.post('/auth', passport.authenticate('local'), (req, res) => {
 
     res.json({login: "valid"});
 
 });
+
+
+/**
+ * Get a list of users
+ */
+app.get("/users", (req, res) =>{
+
+    User.find({}, (error, response) =>{
+        if(error){
+            res.json({error: true});
+        }else {
+            res.json(response);
+        }
+    });
+
+
+});
+
 
 
 app.listen(port, ()=>{
