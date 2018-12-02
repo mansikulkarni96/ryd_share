@@ -11,15 +11,11 @@ const   smartcar        = require('smartcar'),
         clientId        = process.env.CLIENTID,
         clientSecret    = process.env.CLIENTSECRET,
         redirectUri     = process.env.REDIRECTURI,
-<<<<<<< HEAD
         port            = process.env.PORT || 3000;
-=======
     //MongoDB
         dbUser          = process.env.DB_USER,
         dbPasswd        = process.env.DB_PASSWD,
-        dbPath          = process.env.DB_PATH,
-        port            = 8000;
->>>>>>> 234127d094d0bd6d82e08f504064c53998ec4f17
+        dbPath          = process.env.DB_PATH;
 
 let     app             = express();
 mongoose.connect(`mongodb://${dbUser}:${dbPasswd}@${dbPath}`, {useNewUrlParser: true});
@@ -190,22 +186,36 @@ app.get('/vehicle/location/:vid/:token', (req, res) => {
 });
 
 
+/**
+ * Lock the tesla with a token and vid
+ */
+app.post('/vehicle/lock/:vid/:token', (req, res) => {
 
-app.get('/vehicle/lock/:vid/:token', (req, res) => {
+    const instance = new smartcar.Vehicle(req.params.vid, req.params.token);
+    instance.lock().then(function() {
+        res.json({msg: "Success!"});
+    }).catch(function(err) {
+            const message = err.message || 'Failed to send lock request to vehicle.';
+            const action = 'locking vehicle';
+            res.send(message);
+        });
 
-    let accessToken = req.params.token;
-    smartcar.getVehicleIds(accessToken)
-        .then(response => {
-            return response.vehicles;
-        })
-        .then(vid => {
-            const vehicle = new smartcar.Vehicle(req.params.vid, accessToken);
-            return vehicle.lock();
-        })
-        .then(vehicle => {
-            res.json(vehicle);
-            console.log(vehicle);
-        })
+});
+
+
+/**
+ * Unlock the tesla with a token and vid
+ */
+app.post('/vehicle/unlock/:vid/:token', (req, res) => {
+
+    const instance = new smartcar.Vehicle(req.params.vid, req.params.token);
+    instance.unlock().then(function() {
+        res.json({msg: "Success!"});
+    }).catch(function(err) {
+        const message = err.message || 'Failed to send lock request to vehicle.';
+        const action = 'locking vehicle';
+        res.send(message);
+    });
 
 });
 
