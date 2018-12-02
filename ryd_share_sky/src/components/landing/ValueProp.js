@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 
 class ValueProp extends Component {
+
 	render() {
+        const goldStyle = {
+            color: '#FFDF00'
+        };
+        const greenStyle = {
+            color: 'green'
+        };
 		return (
 			<div>
 				<section id="features" className="section section-feature-grey is-medium">
 		            <div className="container">
 		                <div className="title-wrapper has-text-centered">
 		                    <h2 className="title is-2">Great Power Comes </h2>
-		                    <h3 className="subtitle is-5 is-muted">With great Responsability</h3>
+		                    <h3 className="subtitle is-5 is-muted">With great Responsibility</h3>
 		                    <div className="divider is-centered"></div>
 		                </div>
 		        
@@ -23,7 +30,7 @@ class ValueProp extends Component {
 		                                    <i className="fas fa-car fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
-		                                    <p>This is some explanatory text that is on two rows</p>
+		                                    <p>Choose from dozen of available cars in your area</p>
 		                                </div>
 		                                <div className="card-action">
 		                                    <a href="#" className="button btn-align-md accent-btn raised">Free Trial</a>
@@ -39,7 +46,7 @@ class ValueProp extends Component {
 		                                    <i className="fas fa-leaf fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
-		                                    <p>This is some explanatory text that is on two rows</p>
+		                                    <p>Pick up guest going the same way as you when you rent a car</p>
 		                                </div>
 		                                <div className="card-action">
 		                                    <a href="#" className="button btn-align-md secondary-btn raised">Get Started</a>
@@ -55,7 +62,7 @@ class ValueProp extends Component {
 		                                    <i className="fas fa-hand-holding-usd fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
-		                                    <p>This is some explanatory text that is on two rows</p>
+		                                    <p>Our subscription makes it a simple payment method, which is 10% less costly than uber and lyft on average (if you are a frequent rider, and need a ride at least 15 times a month).</p>
 		                                </div>
 		                                <div className="card-action">
 		                                    <a href="#" className="button btn-align-md primary-btn raised">Get Started</a>
@@ -74,6 +81,7 @@ class ValueProp extends Component {
 		                        <h1 className="title section-title">Our platform is a two-sided market place, that will have your needs met</h1>
 		                        <h3 className="subtitle is-4 is-muted">We know you deserve the best and have high expectation for how the future of community transportation looks like with you</h3>
 		                        <div className="divider"></div>
+                                <h3 className="subtitle is-4 is-muted">Here's how it works</h3>
 		                    </div>
 		                    <div className="column is-8 mt-60">
 		        
@@ -81,14 +89,16 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <i className="fas fa-user-circle fa-4x"></i>
+											<i className="fas fa-star fa-3x" style={goldStyle}></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Car owner</span>
+		                                      <span className="icon-box-title">Car owner</span>
 		                                        <span className="icon-box-text">Don't use your car freqently? Want to earn some extra cash? Join our platform. We provide a way for car owners to let drivers in need of an on demand ride, to rent a car for a fraction of the cost of owning a car.</span>
+		                                      {/*  <span className="icon-box-title">Join</span>
+		                                        <span className="icon-box-text">Start booking rides, as soon as you Sign Up!</span>*/}
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -97,7 +107,7 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <i className="far fa-handshake fa-4x"></i>
+                                            <i className="fas fa-car fa-3x" style={greenStyle}></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
@@ -113,14 +123,17 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <i className="fas fa-lock fa-4x"></i>
+                                            <i className="fas fa-3x fa-parking"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Security</span>
-		                                        <span className="icon-box-text">Our clients' security is one of our utmost important focus we have. We will protect car owners from theft, property damage and personal data; as well as, protect car renters from overcharges, short-term insurance and personal data.</span>
+		                                       {/* <span className="icon-box-title">Security</span>
+		                                        <span className="icon-box-text">Our clients' security is one of our utmost important focus we have. We will protect car owners from theft, property damage and personal data; as well as, protect car renters from overcharges, short-term insurance and personal data.</span>*/}
+		                                        <span className="icon-box-title">Return</span>
+		                                        <span className="icon-box-text">Drop off the vehicle to one of our Iterportation</span>
+                                                <span className="icon-box-text">Iterportation are specific locations to drop off our cars</span>
 		                                    </p>
 		                                </div>
 		                            </div>

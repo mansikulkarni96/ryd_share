@@ -22,7 +22,7 @@ class SocialProof extends Component {
 		        
 		                <div className="title-wrapper has-text-centered">
 		                    <h2 className="title is-2 light-text is-spaced">Our Clients love us !</h2>
-		                    <h3 className="subtitle is-5 light-text">Our passion is to make their lives simpler.</h3>
+		                    <h3 className="subtitle is-5 light-text">Our passion is to make your live simpler, one ride at a time.</h3>
 		                </div>
 		        
 		                <div className="content-wrapper">
@@ -30,7 +30,7 @@ class SocialProof extends Component {
 		                        <div className="column is-4">
 		                            <figure className="testimonial">
 		                                <blockquote>
-		                                    Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+		                                    Iterport app has helped my roommates and I schedule who will use my car, for how long and how much. Love the app design, practically and making some money helps too.
 		                                </blockquote>
 		                                <div className="author">
 		                                    <img src={personOne} alt=""/>
@@ -41,7 +41,7 @@ class SocialProof extends Component {
 		                        <div className="column is-4">
 		                            <figure className="testimonial">
 		                                <blockquote>
-		                                    Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+		                                    Before Iterport, I would have to use the public transportation in my town and grusomely walk hours to my local grocery store. Some times I would miss the bus, and have to manage a hectic schedule just to get groceries once per week. Iterport save me so much time and money, with it's easy to use platform and low cost. Thank you Iterport!
 		                                </blockquote>
 		                                <div className="author">
 		                                    <img src={personTwo} alt=""/>
@@ -52,7 +52,7 @@ class SocialProof extends Component {
 		                        <div className="column is-4">
 		                            <figure className="testimonial">
 		                                <blockquote>
-		                                    Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+		                                	Life has been much more doable with Iterport. Now I can get to the places I want, whenever my car is in the shop. There are rarely cars unavailable in my area, so it works out pretty well. 
 		                                </blockquote>
 		                                <div className="author">
 		                                    <img src={personThree} alt=""/>
