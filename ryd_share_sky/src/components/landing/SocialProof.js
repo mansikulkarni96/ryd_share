@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 // Components
-import personOne from '../../assets/img/1.png'
-import personTwo from '../../assets/img/2.png'
-import personThree from '../../assets/img/3.png'
+import personOne from '../../assets/img/1.png';
+import personTwo from '../../assets/img/2.png';
+import personThree from '../../assets/img/3.png';
+import appMock from '../../assets/img/app-mockup.png';
 
 // Apollo
 import { compose, graphql } from 'react-apollo'
@@ -70,7 +71,9 @@ class SocialProof extends Component {
 		                <div className="columns">
 		                    <div className="column is-10 is-offset-1">
 		                        <div className="has-text-centered">
-		                            <img className="pushed-image" src="assets/images/illustrations/mockups/app-mockup.png" />
+									<figure className="image is-4by3">
+                                        <img className="pushed-image" src={appMock} style={{borderRadius: "8px"}}/>
+									</figure>
 		                        </div>
 		                    </div>
 		                </div>
