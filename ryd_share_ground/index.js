@@ -6,7 +6,7 @@ const   smartcar        = require('smartcar'),
         clientId        = process.env.CLIENTID,
         clientSecret    = process.env.CLIENTSECRET,
         redirectUri     = process.env.REDIRECTURI,
-        port            = 8000;
+        port            = process.env.PORT || 3000;
 
 let app = express();
 
