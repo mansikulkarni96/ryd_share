@@ -4,7 +4,7 @@ class ValueProp extends Component {
 	render() {
 		return (
 			<div>
-				<section className="section section-feature-grey is-medium">
+				<section id="features" className="section section-feature-grey is-medium">
 		            <div className="container">
 		                <div className="title-wrapper has-text-centered">
 		                    <h2 className="title is-2">Great Power Comes </h2>
@@ -17,10 +17,10 @@ class ValueProp extends Component {
 		                        <div className="column is-one-third">
 		                            <div className="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
 		                                <div className="card-title">
-		                                    <h4>App builder</h4>
+		                                    <h4>Ride on demand</h4>
 		                                </div>
-		                                <div className="card-icon">
-		                                    <img src="assets/images/illustrations/icons/mouse-globe.svg" alt="mouse-globe" />
+		                                <div className="card-icon" style={{margin: "2.5em 0"}}>
+		                                    <i className="fas fa-car fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
 		                                    <p>This is some explanatory text that is on two rows</p>
@@ -33,10 +33,10 @@ class ValueProp extends Component {
 		                        <div className="column">
 		                            <div className="feature-card is-bordered has-text-centered revealOnScroll delay-2" data-animation="fadeInLeft">
 		                                <div className="card-title">
-		                                    <h4>Cloud integration</h4>
+		                                    <h4>Improve carbon footprint</h4>
 		                                </div>
-		                                <div className="card-icon">
-		                                    <img src="assets/images/illustrations/icons/laptop-cloud.svg" alt="laptop-cloud" />
+		                                <div className="card-icon" style={{margin: "2.5em 0"}}>
+		                                    <i className="fas fa-leaf fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
 		                                    <p>This is some explanatory text that is on two rows</p>
@@ -49,10 +49,10 @@ class ValueProp extends Component {
 		                        <div className="column">
 		                            <div className="feature-card is-bordered has-text-centered revealOnScroll delay-3" data-animation="fadeInLeft">
 		                                <div className="card-title">
-		                                    <h4>Addons & Plugins</h4>
+		                                    <h4>Lower the cost</h4>
 		                                </div>
-		                                <div className="card-icon">
-		                                    <img src="assets/images/illustrations/icons/plug-cloud.svg" alt="plug-cloud" />
+		                                <div className="card-icon" style={{margin: "2.5em 0"}}>
+		                                    <i className="fas fa-hand-holding-usd fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
 		                                    <p>This is some explanatory text that is on two rows</p>

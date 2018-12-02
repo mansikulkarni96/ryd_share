@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Scroll from 'react-scroll'
 
 import Logo from '../../assets/img/logo.svg'
 
@@ -10,35 +12,58 @@ class Navbar extends Component {
 	render() {
 
         const { showRegistration } = this.props
+        const ScrollLink = Scroll.Link
 
 		return (
 			<nav className="navbar is-primary is-transparent no-shadow" role="navigation" aria-label="main navigation">
                 <div className="container">
                     <div className="navbar-brand">
                         <a className="navbar-item" href="https://cssninja.io">
-                            <img src={Logo} alt="Project Logo" width="500" height="500" />
+                            <img src={Logo} alt="Project Logo" width="60" height="500" />
+                            <h1 className="title">
+                                Iterport
+                            </h1>
                         </a>
                     </div>
             
                     <div id="navbar-menu" className="navbar-menu is-static">
             
                         <div className="navbar-end">
-                            <a href="#" className="navbar-item">
+                            <ScrollLink 
+                                to="features"
+                                smooth={true}
+                                offset={20}
+                                duration={500} 
+                                className="navbar-item"
+                            >
                                 Features
-                            </a>
-                            <a href="#" className="navbar-item">
+                            </ScrollLink>
+                            <ScrollLink
+                                to="pricing"
+                                smooth={true}
+                                offset={20}
+                                duration={500} 
+                                className="navbar-item"
+                            >
                                 Pricing
-                            </a>
+                            </ScrollLink>
                             <a 
                                 className="navbar-item modal-trigger" 
                                 data-modal="auth-modal"
                                 onClick={e => {
                                     showRegistration({ variables: { showRegistration: true } })
+                                    localStorage.setItem('x', false)
                                 }}
                             >
                                 Log in
                             </a>
-                            <a className="navbar-item">
+                            <a 
+                                className="navbar-item"
+                                onClick={e => {
+                                    showRegistration({ variables: { showRegistration: true } })
+                                    localStorage.setItem('x', true)
+                                }}
+                            >
                                 <span className="button signup-button rounded secondary-btn raised">
                                     Sign up
                                 </span>

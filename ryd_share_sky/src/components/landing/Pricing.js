@@ -1,42 +1,87 @@
 import React, { Component } from 'react'
 
+// Apollo
+import { compose, graphql } from 'react-apollo'
+import { SHOW_REGISTRATION, GET_REGISTRATION } from '../../graphql/landing'
+
+
 class Pricing extends Component {
 	render() {
+
+		const { showRegistration } = this.props
+
 		return (
-			<section className="section section-light-grey is-medium">
-	            <div className="container">
-	                <div className="title-wrapper has-text-centered">
-	                    <h2 className="title is-2 is-spaced">Drop us a line or two </h2>
-	                    <h3 className="subtitle is-5 is-muted">We'd love to hear from You</h3>
-	                    <div className="divider is-centered"></div>
-	                </div>
-	        
-	                <div className="content-wrapper">
-	                    <div className="columns">
-	                        <div className="column is-6 is-offset-3">
-	                            <form>
-	                                <div className="columns is-multiline">
-	                                    <div className="column is-6">
-	                                        <input className="input is-medium" type="text" placeholder="Enter your Name" />
-	                                    </div>
-	                                    <div className="column is-6">
-	                                        <input className="input is-medium" type="email" placeholder="Enter your Email" />
-	                                    </div>
-	                                    <div className="column is-12">
-	                                        <textarea className="textarea" rows="10" placeholder="Write someting ..."></textarea>
-	                                    </div>
-	                                    <div className="form-footer has-text-centered mt-10">
-	                                        <button className="button cta is-large primary-btn raised is-clear">Send Message</button>
-	                                    </div>
-	                                </div>
-	                            </form>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
+			<section id="pricing" className="section section-light-grey is-medium">
+	            <div className="pricing-table">
+				  <div className="pricing-plan is-warning">
+				    <div className="plan-header">Community</div>
+				    <div className="plan-price"><span className="plan-price-amount"><span className="plan-price-currency">$</span>20</span>/month</div>
+				    <div className="plan-items">
+				      <div className="plan-item">Up to 300 miles /month</div>
+				      <div className="plan-item">Pick up guest on the way</div>
+				      <div className="plan-item">4 door model cars</div>
+				      <div className="plan-item">-</div>
+				    </div>
+				    <div className="plan-footer">
+				      <button 
+				      	className="button is-fullwidth"
+				      	onClick={e => {
+				      		showRegistration({ variables: { showRegistration: true } })
+				      	}}
+				      >
+				      	Choose
+				      </button>
+				    </div>
+				  </div>
+
+				  <div className="pricing-plan is-active">
+				    <div className="plan-header">Trip</div>
+				    <div className="plan-price"><span className="plan-price-amount"><span className="plan-price-currency">$</span>100</span>/month</div>
+				    <div className="plan-items">
+				      <div className="plan-item">Up to 2,000 miles /month</div>
+				      <div className="plan-item">Pick up guest on the way</div>
+				      <div className="plan-item">4 door model cars</div>
+				      <div className="plan-item">Convenient drop off spot</div>
+				    </div>
+				    <div className="plan-footer">
+				      <button 
+				      	className="button is-fullwidth"
+				      	onClick={e => {
+				      		showRegistration({ variables: { showRegistration: true } })
+				      	}}
+				      >
+				      	Choose
+				      </button>
+				    </div>
+				  </div>
+
+				  <div className="pricing-plan is-danger">
+				    <div className="plan-header">Luxury</div>
+				    <div className="plan-price"><span className="plan-price-amount"><span className="plan-price-currency">$</span>500</span>/month</div>
+				    <div className="plan-items">
+				      <div className="plan-item">Up to 5,000 miles /month</div>
+				      <div className="plan-item">No guest pick up</div>
+				      <div className="plan-item"></div>
+				      <div className="plan-item">International travel</div>
+				    </div>
+				    <div className="plan-footer">
+				      <button 
+				      	className="button is-fullwidth"
+				      	onClick={e => {
+				      		showRegistration({ variables: { showRegistration: true } })
+				      	}}
+				      >
+				      	Choose
+				      </button>
+				    </div>
+				  </div>
+				</div>
 	        </section>
 		)
 	}
 }
 
-export default Pricing
+export default compose(
+    graphql(SHOW_REGISTRATION, { name: 'showRegistration' }), 
+    graphql(GET_REGISTRATION, { name: 'getRegistration' })
+)(Pricing)
