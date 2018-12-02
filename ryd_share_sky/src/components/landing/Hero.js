@@ -74,9 +74,7 @@ class Hero extends Component {
 	                            </h1>
 	                            <h2 className="subtitle is-5 is-muted">Lorem ipsum sit dolor amet is a dummy text used by typography industry </h2>
 	                            <p>
-	                                <a className="button cta rounded primary-btn raised">
-	                                    Get Started
-	                                </a>
+	                                <button className="button is-success is-outlined glow is-rounded">Sign In</button>
 	                            </p>
 	                        </div>
 	                        <div className="column is-5 is-offset-1">
