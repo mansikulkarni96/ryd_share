@@ -187,7 +187,7 @@ app.get('/vehicle/location/:vid/:token', (req, res) => {
 
 
 
-app.post('/vehicle/lock/:vid/:token', (req, res) => {
+app.get('/vehicle/lock/:vid/:token', (req, res) => {
 
     let accessToken = req.params.token;
     smartcar.getVehicleIds(accessToken)
@@ -195,7 +195,7 @@ app.post('/vehicle/lock/:vid/:token', (req, res) => {
             return response.vehicles;
         })
         .then(vid => {
-            const vehicle = new smartcar.Vehicle(req.params.vid, accessToken).vin();
+            const vehicle = new smartcar.Vehicle(req.params.vid, accessToken);
             return vehicle.lock();
         })
         .then(vehicle => {
