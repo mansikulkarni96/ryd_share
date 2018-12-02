@@ -6,12 +6,17 @@ class CarList extends Component {
 	render() {
 		return (
 			<div>
-				<button className="button">
-					Open car
-				</button>
-				<button className="button">
-					Close car
-				</button>
+				<div className="columns">
+					<div className="column is-offset-5">
+						<button className="button is-rounded is-medium" style={{marginRight: '12em'}}>
+							Open car
+						</button>
+
+						<button className="button is-rounded is-medium is-danger">
+							Close car
+						</button>
+					</div>
+				</div>
 			</div>
 		)
 	}
