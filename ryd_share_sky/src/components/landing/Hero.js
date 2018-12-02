@@ -5,7 +5,7 @@ import HeroImage from '../../assets/img/hero_image.svg'
 class Hero extends Component {
 	render() {
 		return (
-			<section className="hero is-fullheight-with-navbar is-bold is-primary">
+			<section className="hero is-fullheight-with-navbar is-primary is-bold">
 	            <nav className="navbar is-primary is-transparent no-shadow" role="navigation" aria-label="main navigation">
 	                <div className="container">
 	                    <div className="navbar-brand">
