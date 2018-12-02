@@ -29,12 +29,32 @@ class Hero extends Component {
 	                        <Typing.Delay ms={1500} />
 	                        <Typing.Backspace count={34} />
 	                        <h1 className="title is-size-1 has-text-right">
-	                        	React Developer
+	                        	Find available cars near you
 	                        </h1>
 	                        <Typing.Delay ms={1500} />
 	                        <Typing.Backspace count={15} />
 	                        <h1 className="title is-size-1 has-text-right">
-		                        Cyber Security Enthusiast
+		                        Unlock car
+							</h1>
+	                        <Typing.Delay ms={1500} />
+	                        <Typing.Backspace count={25} />
+	                        <h1 className="title is-size-1 has-text-right">
+		                        Go to your destination
+							</h1>
+	                        <Typing.Delay ms={1500} />
+	                        <Typing.Backspace count={25} />
+	                        <h1 className="title is-size-1 has-text-right">
+		                        Pick up guest on the way
+							</h1>
+	                        <Typing.Delay ms={1500} />
+	                        <Typing.Backspace count={25} />
+	                        <h1 className="title is-size-1 has-text-right">
+		                        Return the car
+							</h1>
+	                        <Typing.Delay ms={1500} />
+	                        <Typing.Backspace count={25} />
+	                        <h1 className="title is-size-1 has-text-right">
+		                        Is that simple!
 							</h1>
 	                        <Typing.Delay ms={1500} />
 	                        <Typing.Backspace count={25} />

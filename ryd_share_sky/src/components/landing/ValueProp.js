@@ -3,12 +3,6 @@ import React, { Component } from 'react'
 class ValueProp extends Component {
 
 	render() {
-        const goldStyle = {
-            color: '#FFDF00'
-        };
-        const greenStyle = {
-            color: 'green'
-        };
 		return (
 			<div>
 				<section id="features" className="section section-feature-grey is-medium">
@@ -62,7 +56,7 @@ class ValueProp extends Component {
 		                                    <i className="fas fa-hand-holding-usd fa-4x"></i>
 		                                </div>
 		                                <div className="card-text">
-		                                    <p>Our subscription makes it a simple payment method, which is 10% less costly than uber and lyft on average (if you are a frequent rider, and need a ride at least 15 times a month).</p>
+		                                    <p>Save about 10% more than uber and lyft on average (if you are a frequent rider, and need a ride at least 15 times a month).</p>
 		                                </div>
 		                                <div className="card-action">
 		                                    <a href="#" className="button btn-align-md primary-btn raised">Get Started</a>
@@ -89,7 +83,7 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-											<i className="fas fa-star fa-3x" style={goldStyle}></i>
+											<i className="fas fa-star fa-3x"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
@@ -107,7 +101,7 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-                                            <i className="fas fa-car fa-3x" style={greenStyle}></i>
+                                            <i className="fas fa-car fa-3x"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
