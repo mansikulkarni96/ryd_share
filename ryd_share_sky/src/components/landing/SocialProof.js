@@ -71,7 +71,7 @@ class SocialProof extends Component {
 		                <div className="columns">
 		                    <div className="column is-10 is-offset-1">
 		                        <div className="has-text-centered">
-									<figure className="image is-4by3">
+									<figure className="image is-4by3" style={{position: 'static'}}>
                                         <img className="pushed-image" src={appMock} style={{borderRadius: "8px"}}/>
 									</figure>
 		                        </div>

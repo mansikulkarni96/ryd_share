@@ -1,40 +1,69 @@
 import React, { Component } from 'react'
 
+import Logo from '../../assets/img/logo.svg'
+
 class Sidebar extends Component {
+	constructor() {
+		super()
+		this.state = {
+			tab: 'history'
+		}
+	}
+
 	render() {
+
+		const { tab } = this.state
+
 		return (
-			<div className="sidebar">
+			<div className="sidebar is-active">
 	            <div className="sidebar-header">
-	                <img src="assets/images/logos/fresh-square.svg" />
+	                <img src={Logo} alt="project logo" />
+	                <strong><p className="is-size-4" style={{ color: 'white' }}>Iterport</p></strong>
 	                <a className="sidebar-close" href="javascript:void(0);"><i data-feather="x"></i></a>
 	            </div>
 	            <div className="inner">
 	                <ul className="sidebar-menu">
-	                    <li><span className="nav-section-title"></span></li>
-	                    <li className="have-children"><a href="#"><span className="fa fa-user"></span>User</a>
-	                        <ul>
-	                            <li><a href="#">Profile</a></li>
-	                            <li><a href="#">Account</a></li>
-	                            <li><a href="#">Settings</a></li>
-	                        </ul>
+	                    <li>
+	                    	<span className="nav-section-title" />
 	                    </li>
-	                    <li className="have-children"><a href="#"><span className="fa fa-envelope"></span>Messages</a>
-	                        <ul>
-	                            <li><a href="#">Inbox</a></li>
-	                            <li><a href="#">Compose</a></li>
-	                        </ul>
+	                    <li 
+	                    	className={`${tab === 'history' ? 'is-dark-blue':''}`}
+	                    	onClick={e => {
+	                    		e.preventDefault()
+	                    		this.setState({ tab: 'history' })
+	                    		localStorage.setItem('item', 'history')
+	                    	}}
+	                    >
+	                    	<a href="#">
+	                    		<span className="fa fa-user fa-lg" />
+	                    		History
+	                    	</a>
 	                    </li>
-	                    <li className="have-children"><a href="#"><span className="fa fa-image"></span>Images</a>
-	                        <ul>
-	                            <li><a href="#">Library</a></li>
-	                            <li><a href="#">Upload</a></li>
-	                        </ul>
+	                    <li 
+	                    	className={`${tab === 'carList' ? 'is-dark-blue':''}`}
+	                    	onClick={e => {
+	                    		e.preventDefault()
+	                    		this.setState({ tab: 'carList' })
+	                    		localStorage.setItem('item', 'carList')
+	                    	}}
+	                    >
+	                    	<a href="#">
+	                    		<span className="fas fa-car-alt fa-lg" />
+	                    		Car list
+	                    	</a>
 	                    </li>
-	                    <li className="have-children"><a href="#"><span className="fa fa-cog"></span>Settings</a>
-	                        <ul>
-	                            <li><a href="#">User settings</a></li>
-	                            <li><a href="#">App settings</a></li>
-	                        </ul>
+	                    <li 
+	                    	className={`${tab === 'bank' ? 'is-dark-blue':''}`}
+	                    	onClick={e => {
+	                    		e.preventDefault()
+	                    		this.setState({ tab: 'bank' })
+	                    		localStorage.setItem('item', 'bank')
+	                    	}}
+	                    >
+	                    	<a href="#">
+	                    		<span className="fas fa-piggy-bank fa-lg" />
+	                    		Bank
+	                    	</a>
 	                    </li>
 	                </ul>
 	            </div>

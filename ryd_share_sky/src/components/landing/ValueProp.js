@@ -71,8 +71,8 @@ class ValueProp extends Component {
 		            <div className="container">
 		                <div className="columns">
 		                    <div className="column is-centered-tablet-portrait">
-		                        <h1 className="title section-title">You're here because you want the best</h1>
-		                        <h3 className="subtitle is-4 is-muted">And we Know it</h3>
+		                        <h1 className="title section-title">Our platform is a two-sided market place, that will have your needs met</h1>
+		                        <h3 className="subtitle is-4 is-muted">We know you deserve the best and have high expectation for how the future of community transportation looks like with you</h3>
 		                        <div className="divider"></div>
 		                    </div>
 		                    <div className="column is-8 mt-60">
@@ -81,14 +81,14 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/laptop-globe.svg" alt="laptop-globe" />
+		                                    <i className="fas fa-user-circle fa-4x"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Powerful and unified interface</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Car owner</span>
+		                                        <span className="icon-box-text">Don't use your car freqently? Want to earn some extra cash? Join our platform. We provide a way for car owners to let drivers in need of an on demand ride, to rent a car for a fraction of the cost of owning a car.</span>
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -97,14 +97,14 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/doc-sync.svg" alt="doc-sync" />
+		                                    <i className="far fa-handshake fa-4x"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Cross device Synchronisation</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Car renter</span>
+		                                        <span className="icon-box-text">Missed the bus? Need to go to grocery store, but the store is too far and don't want to waste time in public transportation? Sign up, see the available cars near you and get to drive on demand.</span>
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -113,14 +113,14 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/mobile-feed.svg" alt="mobile-feed" />
+		                                    <i className="fas fa-lock fa-4x"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Nomad System</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Security</span>
+		                                        <span className="icon-box-text">Our clients' security is one of our utmost important focus we have. We will protect car owners from theft, property damage and personal data; as well as, protect car renters from overcharges, short-term insurance and personal data.</span>
 		                                    </p>
 		                                </div>
 		                            </div>
