@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 
 class ValueProp extends Component {
+
 	render() {
+        const goldStyle = {
+            color: '#FFDF00'
+        };
+        const greenStyle = {
+            color: 'green'
+        };
 		return (
 			<div>
 				<section id="features" className="section section-feature-grey is-medium">
 		            <div className="container">
 		                <div className="title-wrapper has-text-centered">
 		                    <h2 className="title is-2">Great Power Comes </h2>
-		                    <h3 className="subtitle is-5 is-muted">With great Responsability</h3>
+		                    <h3 className="subtitle is-5 is-muted">With great Responsibility</h3>
 		                    <div className="divider is-centered"></div>
 		                </div>
 		        
@@ -82,14 +89,14 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/laptop-globe.svg" alt="laptop-globe" />
+											<i className="fas fa-star fa-3x" style={goldStyle}></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Powerful and unified interface</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Join</span>
+		                                        <span className="icon-box-text">Start booking rides, as soon as you Sign Up!</span>
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -98,14 +105,14 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/doc-sync.svg" alt="doc-sync" />
+                                            <i className="fas fa-car fa-3x" style={greenStyle}></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Cross device Synchronisation</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Drive</span>
+		                                        <span className="icon-box-text">Choose the plan that suits you and you can drive upto 5000 miles per month!</span>
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -114,14 +121,15 @@ class ValueProp extends Component {
 		                        <article className="media icon-box">
 		                            <figure className="media-left">
 		                                <p className="image">
-		                                    <img src="assets/images/illustrations/icons/mobile-feed.svg" alt="mobile-feed" />
+                                            <i className="fas fa-3x fa-parking"></i>
 		                                </p>
 		                            </figure>
 		                            <div className="media-content mt-50">
 		                                <div className="content">
 		                                    <p>
-		                                        <span className="icon-box-title">Nomad System</span>
-		                                        <span className="icon-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.</span>
+		                                        <span className="icon-box-title">Return</span>
+		                                        <span className="icon-box-text">Drop off the vehicle to one of our Iterportation</span>
+                                                <span className="icon-box-text">Iterportation are specific locations to drop off our cars</span>
 		                                    </p>
 		                                </div>
 		                            </div>
