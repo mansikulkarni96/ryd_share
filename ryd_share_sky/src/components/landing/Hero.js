@@ -84,22 +84,13 @@ class Hero extends Component {
 	                                <img src={HeroImage} alt="Description" />
 	                            </figure>
 	                        </div>
-	        
 	                    </div>
 	                </div>
 	            </div>
 
 	            <div className="hero-foot mb-20">
 	                <div className="container">
-	                    <div className="tabs is-centered">
-	                        <ul>
-	                            <li><a><img className="partner-logo" src="assets/images/logos/clients/systek.svg" /></a></li>
-	                            <li><a><img className="partner-logo" src="assets/images/logos/clients/tribe.svg" /></a></li>
-	                            <li><a><img className="partner-logo" src="assets/images/logos/clients/kromo.svg" /></a></li>
-	                            <li><a><img className="partner-logo" src="assets/images/logos/clients/infinite.svg" /></a></li>
-	                            <li><a><img className="partner-logo" src="assets/images/logos/clients/gutwork.svg" /></a></li>
-	                        </ul>
-	                    </div>
+	                    <p className="title">Powered by</p>
 	                </div>
 	            </div>
 	        </section>

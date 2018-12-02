@@ -27,7 +27,6 @@
         </filter>
     </defs>
     <g id="Login-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Background" fill-opacity="0.914543705" fill="#070609" x="0" y="0" width="1440" height="1024"></rect>
         <g id="Oval">
             <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
             <use fill="#AEFF54" fill-rule="evenodd" xlink:href="#path-1"></use>
